@@ -1,35 +1,35 @@
 {
-  "name": "christian-articles",
-  "version": "1.0.0",
-  "description": "Collection of Christian articles",
-  "main": "app.js",
-  "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/victorpro4C/christian-articles.git"
-  },
-  "keywords": [
-    "Christ",
-    "Christian",
-    "Daily",
-    "Manna"
-  ],
-  "author": "Victor",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/victorpro4C/christian-articles/issues"
-  },
-  "homepage": "https://github.com/victorpro4C/christian-articles#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.2",
-    "slugify": "^1.3.6"
-  },
-  "devDependencies": {
-    "morgan": "^1.9.1"
-  }
+ "name": "christian-articles",
+ "version": "1.0.0",
+ "description": "Collection of Christian articles",
+ "main": "app.js",
+ "scripts": {
+  "start": "nodemon server.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/victorpro4C/christian-articles.git"
+ },
+ "keywords": [
+  "Christ",
+  "Christian",
+  "Daily",
+  "Manna"
+ ],
+ "author": "Victor",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/victorpro4C/christian-articles/issues"
+ },
+ "homepage": "https://github.com/victorpro4C/christian-articles#readme",
+ "dependencies": {
+  "dotenv": "^8.2.0",
+  "express": "^4.17.1",
+  "mongoose": "^5.9.2",
+  "slugify": "^1.3.6"
+ },
+ "devDependencies": {
+  "morgan": "^1.9.1"
+ }
 }
