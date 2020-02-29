@@ -45,6 +45,10 @@ const articleSchema = new mongoose.Schema({
   },
   dateToRead: {
     type: Date
+  },
+  like: {
+    type: Boolean,
+    default: false
   }
 });
 
