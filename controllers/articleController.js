@@ -1,14 +1,23 @@
 const Article = require("./../models/articleModel");
 
 exports.getAllArticles = async (req, res, next) => {
-  const articles = await Article.find();
-  res.status(200).json({
-    status: "success",
-    data: {
-      articles
-    }
-  });
-  next();
+  try {
+    const articles = await Article.find();
+    res.status(200).json({
+      status: "success",
+      data: {
+        articles
+      }
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      data: {
+        err
+      }
+    });
+  }
+
 }
 
 exports.getArticle = (req, res, next) => {
