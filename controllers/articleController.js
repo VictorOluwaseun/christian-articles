@@ -51,10 +51,27 @@ exports.createArticle = async (req, res, next) => {
   }
 }
 
-exports.updateArticle = (req, res, next) => {
-  res.json({
-    data: "Update an article"
-  });
+exports.updateArticle = async (req, res, next) => {
+  try {
+    const article = await Article.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
+    res.status(200).json({
+      status: "success",
+      data: {
+        article
+      }
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      data: {
+        err
+      }
+    });
+  }
+
 }
 exports.deleteArticle = (req, res, next) => {
   res.json({
