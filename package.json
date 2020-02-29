@@ -1,0 +1,32 @@
+{
+  "name": "christian-articles",
+  "version": "1.0.0",
+  "description": "Collection of Christian articles",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorpro4C/christian-articles.git"
+  },
+  "keywords": [
+    "Christ",
+    "Christian",
+    "Daily",
+    "Manna"
+  ],
+  "author": "Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorpro4C/christian-articles/issues"
+  },
+  "homepage": "https://github.com/victorpro4C/christian-articles#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}
