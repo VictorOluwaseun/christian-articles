@@ -5,5 +5,6 @@
  "body": "String",
  "keyVerse": "String",
  "image": "string",
- "dateToRead": "Date"
+ "dateToRead": "Date",
+ "like": "ref"
 }
