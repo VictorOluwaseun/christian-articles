@@ -82,8 +82,18 @@ exports.updateArticle = async (req, res, next) => {
   }
 
 }
-exports.deleteArticle = (req, res, next) => {
-  res.json({
-    data: "Delete an article"
-  });
+exports.deleteArticle = async (req, res, next) => {
+  try {
+    await Article.findByIdAndDelete(req.params.id);
+
+    res.status(204).json({
+      status: "success",
+      data: null
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      data: err
+    });
+  }
 }
