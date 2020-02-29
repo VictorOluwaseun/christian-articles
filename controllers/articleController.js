@@ -20,9 +20,14 @@ exports.getAllArticles = async (req, res, next) => {
 
 }
 
-exports.getArticle = (req, res, next) => {
-  res.json({
-    data: "Get One article"
+exports.getArticle = async (req, res, next) => {
+  const article = await Article.findById(req.params.id);
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      article
+    }
   });
 }
 
