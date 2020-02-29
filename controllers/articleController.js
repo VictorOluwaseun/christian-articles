@@ -5,6 +5,7 @@ exports.getAllArticles = async (req, res, next) => {
     const articles = await Article.find();
     res.status(200).json({
       status: "success",
+      result: articles.length,
       data: {
         articles
       }
