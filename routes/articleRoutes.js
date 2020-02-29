@@ -1,14 +1,11 @@
 const express = require("express");
+const articleController = require("./../controllers/articleController");
 
 const router = express.Router();
 
 router
   .route("/")
-  .get((req, res, next) => {
-    res.json({
-      data: "Welcome"
-    })
-  })
+  .get(articleController.getAllArticles);
 
 
 module.exports = router;
