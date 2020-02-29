@@ -5,7 +5,14 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(articleController.getAllArticles);
+  .get(articleController.getAllArticles)
+  .post(articleController.postArticle);
+
+router
+  .route("/:id")
+  .get(articleController.getArticle)
+  .patch(articleController.updateArticle)
+  .delete(articleController.deleteArticle)
 
 
 module.exports = router;
