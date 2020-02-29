@@ -56,3 +56,7 @@ articleSchema.pre("save", function (next) {
   });
   next();
 });
+
+const Article = mongoose.model("Article", articleSchema);
+
+module.exports = Article;
