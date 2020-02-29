@@ -1,5 +1,6 @@
 const Article = require("./../models/articleModel");
 const catchAsync = require("./../utils/catchAsync");
+const AppError = require("./../utils/appError");
 
 exports.getAllArticles = catchAsync(async (req, res, next) => {
   const articles = await Article.find();
