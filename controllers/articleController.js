@@ -22,14 +22,23 @@ exports.getAllArticles = async (req, res, next) => {
 }
 
 exports.getArticle = async (req, res, next) => {
-  const article = await Article.findById(req.params.id);
+  try {
+    const article = await Article.findById(req.params.id);
 
-  res.status(200).json({
-    status: "success",
-    data: {
-      article
-    }
-  });
+    res.status(200).json({
+      status: "success",
+      data: {
+        article
+      }
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      data: {
+        err
+      }
+    });
+  }
 }
 
 exports.createArticle = async (req, res, next) => {
