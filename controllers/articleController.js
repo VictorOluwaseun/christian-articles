@@ -15,6 +15,7 @@ exports.getAllArticles = catchAsync(async (req, res, next) => {
 
 exports.getArticle = catchAsync(async (req, res, next) => {
   const article = await Article.findById(req.params.id);
+  if (!article) return next(new AppError("No article found with that ID", 404));
   res.status(200).json({
     status: "success",
     data: {
