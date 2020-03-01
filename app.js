@@ -19,12 +19,15 @@ app.use((req, res, next) => {
   next();
 });
 
+//Route
 app.use("/api/v1/articles", articleRouter);
 
+//The undefined or unresgistered routes
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
+//The global error handling middleware
 app.use(globalErrorHandler);
 
 module.exports = app;
