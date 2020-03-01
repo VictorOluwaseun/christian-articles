@@ -21,6 +21,7 @@ app.use((req, res, next) => {
 
 //Route
 app.use("/api/v1/articles", articleRouter);
+app.use("/api/v1/users", userRouter);
 
 //The undefined or unresgistered routes
 app.all("*", (req, res, next) => {
